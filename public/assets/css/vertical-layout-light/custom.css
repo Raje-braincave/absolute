@@ -1,0 +1,113 @@
+.address-card {
+    background: #ffffff;
+    color: #000000;
+    padding: 16px;
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background: #ffffff;
+    border: 1px solid #DFDFDF;
+    border-radius: 6px;
+    position: relative;
+    width: 230px;
+    height: 40px;
+  }
+  .col-form-label {
+    padding: 0 !important;
+  }
+  .search-bar input {
+    background: transparent;
+    border: 0;
+    color: #212121;
+    font-size: 0.8rem;
+    line-height: 2;
+    height: 100%;
+    outline: initial !important;
+    padding: 0.5rem 1rem;
+    width: calc(100% - 32px);
+  }
+
+  .search-bar .search-icon {
+    font-size: 18px;
+    width: 24px;
+    display: inline-block;
+  }
+
+  .card-p {
+    color: #47404f;
+    font-size: 0.813rem;
+    font-weight: 400;
+  }
+
+  .view-tabs .nav-link.active {
+    background: #f6f8fa !important;
+    border: 1px solid #dee2e6 !important;
+  }
+
+  .view-tabs .nav-link {
+    background: transparent !important;
+    border: none !important;
+  }
+
+
+
+  .lead-row .card-body {
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 6px;
+    height: 500px;
+    overflow-y: auto;
+  }
+
+  .lead-card {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  .lead-card .btn-group .mdi-pencil {
+    color: #28a745;
+  }
+
+  .lead-card .btn-group .mdi-delete {
+    color: #dc3545;
+  }
+
+  .lead-card .btn-group button:hover .mdi {
+    color: #fff;
+  }
+
+  .lead-row .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 5px !important;
+    font-size: 0.813rem;
+    line-height: 1 !important;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .lead-row h5 {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .lead-column {
+    width: 235px;
+  }
+
+  .lead-card button i {
+    font-size: 13px;
+  }
