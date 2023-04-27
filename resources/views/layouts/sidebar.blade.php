@@ -7,25 +7,25 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="customer-managment.html">
+        <a class="nav-link" href="{{url('/crm')}}">
           <i class="mdi mdi-account-multiple menu-icon"></i>
          <span class="menu-title">CRM</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="leads.html">
+        <a class="nav-link" href="{{url('/leads')}}">
           <i class="mdi mdi-account menu-icon"></i>
           <span class="menu-title">Leads</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="finance.html">
+        <a class="nav-link" href="{{url('/finance')}}">
           <i class="mdi mdi-cash-multiple menu-icon"></i>
           <span class="menu-title">Finance</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="service-managment.html">
+        <a class="nav-link" href="{{url('/serive-management')}}">
           <i class="mdi mdi mdi-settings menu-icon"></i>
           <span class="menu-title">Service Management</span>
         </a>

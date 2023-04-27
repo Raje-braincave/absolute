@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\FinanceController;
+use App\Http\Controllers\ManagementController;
+use App\Http\Controllers\LeadsController;
+use App\Http\Controllers\CrmController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +25,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Service Management
+Route::get('/serive-management',[ManagementController::class, 'serviceindex']);
+
+
+//finance
+Route::get('/finance',[FinanceController::class, 'finance']);
+
+
+
+//leads
+Route::get('/leads',[LeadsController::class, 'leads']);
+
+//crm
+Route::get('/crm',[CrmController::class, 'crm']);
