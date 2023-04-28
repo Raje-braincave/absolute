@@ -6,6 +6,8 @@ use App\Http\Controllers\FinanceController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\LeadsController;
 use App\Http\Controllers\CrmController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +23,19 @@ use App\Http\Controllers\CrmController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/register_save',[App\Http\Controllers\Auth\RegisterController::class,'register']);
+Route::get('/showrole',[App\Http\Controllers\Auth\RegisterController::class,'showrole']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Role
+Route::get('/role',[RoleController::class,'role']);
+Route::post('/create',[RoleController::class,'createrole']);
+Route::get('/editrole/{id}',[RoleController::class,'editrole']);
+Route::post('/updaterole/{id}',[RoleController::class,'updaterole']);
+Route::get('/deleterole/{id}',[RoleController::class,'delete']);
 
 //Service Management
 Route::get('/serive-management',[ManagementController::class, 'serviceindex']);
