@@ -24,7 +24,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::post('/register_save',[App\Http\Controllers\Auth\RegisterController::class,'register']);
-Route::get('/showrole',[App\Http\Controllers\Auth\RegisterController::class,'showrole']);
 
 Auth::routes();
 

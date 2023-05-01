@@ -5,6 +5,7 @@ namespace Illuminate\Foundation\Auth;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Auth;
 
 trait RegistersUsers
@@ -18,6 +19,8 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
+        // $roles = Role::where("is_delete","1")->whereNotIn('id', [1])->get();
+        // print_r($roles);exit;
         return view('auth.register');
     }
 

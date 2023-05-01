@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
-use App\Models\Role;
+
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -43,7 +43,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
+    /**                                                            
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -64,42 +64,39 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    // protected function create(array $data)
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
+    }
+
+    
+    // public function register(Request $request)
     // {
-    //     return User::create([
-    //         'name' => $data['name'],
-    //         'email' => $data['email'],
-    //         'password' => Hash::make($data['password']),
-    //     ]);
+    //     echo "<pre>";
+    //     print_r($request->all());
+    //     exit;
+    //     $user = new User() ;
+    //     $user->first_name = $request->first_name;
+    //     $user->last_name = $request->last_name;
+    //     $user->gender = $request->gender;
+    //     $user->phone = $request->phone;
+    //     $user->role = $request->role;
+    //     $user->address = $request->address;
+    //     if (request()->hasFile('image')) {
+    //         $image = $request->file('image');
+    //         $image_name = strtolower(rand(1000, 9999) . time() . '.' . $image->getClientOriginalExtension());
+    //         $image->move(public_path('/allphoto'), $image_name);
+    //         $user->image = $image_name;
+    //       }
+    //     $user->email = $request->email;
+    //     $user->password = bcrypt($request->password);
+    //     $user->save();
+    //     return redirect(url('/home'));
+
+
     // }
-
-    public function showrole()
-    {
-        $roles = Role::where("is_delete","1")->whereNotIn('id', [1])->get();
-        return view('auth.register', compact('roles'));
-    }
-
-    public function register(Request $request)
-    {
-        // dd($request->all());
-        $user = new User() ;
-        $user->first_name = $request->first_name;
-        $user->last_name = $request->last_name;
-        $user->gender = $request->gender;
-        $user->phone = $request->phone;
-        $user->role = $request->role;
-        $user->address = $request->address;
-        if (request()->hasFile('image')) {
-            $image = $request->file('image');
-            $image_name = strtolower(rand(1000, 9999) . time() . '.' . $image->getClientOriginalExtension());
-            $image->move(public_path('/allphoto'), $image_name);
-            $user->image = $image_name;
-          }
-        $user->email = $request->email;
-        $user->password = bcrypt($request->password);
-        $user->save();
-        return redirect(url('/home'));
-
-
-    }
 }
