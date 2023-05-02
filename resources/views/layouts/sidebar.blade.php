@@ -7,6 +7,18 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{url('/usermanagement')}}">
+          <i class="mdi mdi-account-multiple menu-icon"></i>
+         <span class="menu-title">User Management</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('/role')}}">
+          <i class="mdi mdi-account-multiple menu-icon"></i>
+         <span class="menu-title">Role&privileges</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{url('/crm')}}">
           <i class="mdi mdi-account-multiple menu-icon"></i>
          <span class="menu-title">CRM</span>
